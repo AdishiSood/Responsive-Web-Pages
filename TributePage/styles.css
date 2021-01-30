@@ -1,0 +1,327 @@
+/*Universal box-sizing for all elements*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Exo', sans-serif;
+    background-color: #94b8b8;
+}
+
+
+/*style header-----------------------------*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #669999;
+}
+
+.overlay {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.overlay-content a, .openbtn, .closebtn {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.overlay-content a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.overlay-content a:hover {
+    color: #444444;
+    background-color: #fff;
+}
+
+.openbtn {
+    display: none;
+    float: right;
+}
+
+.closebtn {
+    display: none;
+    font-family: 'Kaushan Script', cursive;
+}
+
+
+/*style main---------------------------------*/
+main, footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 49px;
+}
+
+#image {
+    background-color: #000000;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    color: #ffffff;
+}
+
+#title {
+    font-size: 25px;
+    font-family: 'Kaushan Script', cursive;
+    margin-bottom: 0px;
+
+}
+
+#img-caption {
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+
+/*style biography section-------------------------*/
+/* all h2 in the document */
+h2 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#biography, #awards {
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+#biography, #filmography, #awards {
+    display: flex;
+    flex-direction: column;
+    padding-top: 65px;
+}
+
+#tribute-info, #movies, .poster, #row, #info {
+    display: flex;
+    flex-direction: row;
+}
+
+#tribute-info, #movies {
+    justify-content: center;
+    align-items: center;
+    padding: 0 90px 40px 90px;
+}
+
+
+#tribute-info img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+#tribute-info p {
+    width: 800px;
+    line-height: 1.8;
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+/*style filmography-------------------------------*/
+
+#movies-left, #movies-right, .award {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#movies-left, #movies-right {
+    justify-content: center;
+    width: 488px;
+    padding: 20px;
+    margin: 18px 0;
+}
+
+.poster {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px 10px;
+    border-radius: 12px;
+    border: 4px dotted grey;
+    box-shadow: 5px 10px 14px rgba(81, 82, 82, 0.4);
+    width: 428px;
+}
+
+.poster img, .award img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    border: 1px solid #cccccc;
+}
+
+.poster ul {
+    padding-left: 30px;
+}
+
+
+/* style awards section ----------------------------*/
+
+#row {
+    justify-content: space-around;
+    margin: 20px 60px;
+    padding-bottom: 40px;
+}
+
+.award {
+    width: 250px;
+    padding: 20px;
+    background-color: #94b8b8;
+    border-radius: 12px;
+    box-shadow: 5px 10px 14px rgba(81, 82, 82, 0.4);
+    margin: 38px 0;
+}
+
+.award p {
+    margin: 10px 0;
+}
+
+.award p:first-of-type {
+    margin-top: 30px;
+}
+
+
+/* style info section -----------------------------*/
+
+#info {
+    padding: 12px 0;
+}
+
+.logo {
+    margin: 0 15px;
+}
+
+/* style footer ----------------------------------*/
+
+footer {
+    background-color: #3d5c5c;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover {
+    color: #c7c406;
+}
+
+/* media queries for devices with small screens-----------*/
+
+@media screen and (max-width: 500px) {
+
+    /* style navigation bar for small devices -----*/
+    .openbtn {
+        display: block;
+        font-size: 22px;
+        color: #fff;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 10%;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #d8d4d4;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        font-size: 60px;
+    }
+
+    /* improve hero image position ------------------*/
+
+    .text {
+        top: .1%;
+        padding-right: 45%;
+    }
+
+    #title {
+        font-size: 25px;
+    }
+
+    #img-caption {
+        font-size: 14px;
+    }
+
+    /* in columns for small devices and reduce width to 360px for Galaxy mobile shorter than iphone---*/
+
+    #tribute-info, #movies, #row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0px;
+    }
+
+    #tribute-info, #tribute-info p, #movies,
+    #movies-left, #movies-right {
+        width: 360px;
+    }
+
+    #movies-left, #movies-right {
+        margin: 0;
+        padding: 0;
+    }
+
+    .poster {
+        width: 330px;
+        padding: 10px;
+        margin: 25px 10px;
+
+    }
+
+    #row {
+        margin: 0;
+    }
+
+    .award {
+        width: 330px;
+        padding: 35px;
+        margin: 25px 10px;
+    }
+
+}
