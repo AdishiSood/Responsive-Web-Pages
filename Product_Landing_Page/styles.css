@@ -1,0 +1,193 @@
+/* CSS Variables */
+
+:root {
+    --primary: #ddd;
+    --dark: #202020;
+    --light: #fff;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--light);
+}
+
+body {
+    background: #121212;
+    line-height: 1.5;
+    margin: 20px 30px;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+}
+
+/* Navigation */
+
+.nav ul {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-bottom: solid #666 1px;
+}
+
+.nav a {
+    display: block;
+    background: var(--dark);
+    text-decoration: none;
+    color: var(--light);
+    padding: 1rem;
+    text-align: center;
+}
+
+.nav a:hover {
+    background: var(--light);
+    color: var(--dark);
+}
+
+.nav a#company-name {
+    font-weight: bold;
+}
+
+
+
+/* Header Container */
+
+.header-container {
+    display: grid;
+    grid-gap: 20px;
+    align-items: center;
+    grid-template-areas:
+    "header-img header-text";
+    padding-top: 100px;
+}
+
+.header-img {
+    display: grid;
+    grid-area: header-img;
+    padding: 1.2rem;
+}
+
+.header-text {
+    display: grid;
+    grid-area: header-text;
+    background: #202020;
+    padding: 1.2rem;
+}
+
+/* Boxes */
+
+.Camera-quality {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.box {
+    background: #202020;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Order */
+
+.order-form {
+    display: grid;
+    background: #202020;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding: 1.2rem;
+}
+
+.order-form form {
+    display: flex;
+    flex-flow: row;
+    justify-items: center;
+    align-items: center;
+}
+
+.order-form input[type="email"] {
+    width: 300px;
+    margin-right: 10px;
+}
+
+.order-form input[type="submit"] {
+    text-transform: uppercase;
+}
+
+/* How It's Made */
+
+.about {
+    display: grid;
+    grid-gap: 20px;
+    padding: 1.2rem;
+    align-items: center;
+    justify-items: center;
+    background: #202020;
+}
+
+/* Footer */
+.logo {
+    margin: 0 15px;
+}
+footer {
+    background: #202020;
+    display: block;
+    padding: 0.5rem;
+    font-size: 14px;
+    text-align:center;
+}
+
+/* Media Queries */
+
+@media(max-width: 700px) {
+    .header-container {
+        grid-template-areas:
+        "header-img"
+        "header-text";
+    }
+
+    .shirt-quality {
+        grid-template-columns: 1fr;
+    }
+
+    .nav ul {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .order-form {
+        grid-template-columns: 1fr;
+    }
+
+    .order-form form {
+        flex-flow: column;
+    }
+
+    .header-container {
+        padding-top: 0px;
+    }
+    .order-form input[type="email"] {
+        width: 300px;
+        margin-bottom: 10px;
+    }
+}
+
+@media(min-width: 700px) {
+    #nav-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
