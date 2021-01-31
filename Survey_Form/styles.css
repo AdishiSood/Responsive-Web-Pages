@@ -1,0 +1,77 @@
+.grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 40px;
+    grid-column-gap: 40px;
+}
+
+h1 {
+    text-align:center;
+}
+
+h2 {
+    margin: 20px 0px 5px 5px;
+}
+
+body {
+    padding:100px;
+    background-color:lightgreen;
+    color:navy;
+}
+
+fieldset {
+    color: navy;
+    background-color:white;
+    font-weight:bold;
+}
+
+
+.banner {
+    grid-column: 1 / span 2;
+    color: navy;
+    background-color:white;
+    font-weight:bold;
+}
+
+#servicesCheck{
+    grid-column: 1/ span 2;
+
+}
+
+#satisfactionField2 {
+    order: 1;
+    grid-column: 1 / span 2;
+    flex-grow: 1;
+}
+legend
+{
+    color:navy;
+}
+#recommendField {
+    order: 2;
+    flex-grow: 1;
+
+}
+
+#timeField {
+    order: 3;
+    flex-grow: 1;
+}
+
+#friendlyField {
+    order: 4;
+    flex-grow: 1;
+}
+
+#comments {
+    order: 5;
+    flex-grow: 1;
+}
+
+textarea {
+    height: 58px;
+    width: 530px;
+}
+.divButton {
+    padding-left: 230px;
+}
