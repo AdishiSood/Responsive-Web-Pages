@@ -1,0 +1,224 @@
+body {
+    padding-top: 50px;
+    background-color: #eee;
+    color: black;
+    position: relative;  /* for scrollspy */
+}
+h1 {
+    color: #ddd;
+    font-size: 4.5em;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    margin-top: 75px;
+}
+@media (max-width: 767px) {
+    h1 {
+        font-size: 3em;
+    }
+}
+h2 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 50px;
+}
+h3 {
+    font-weight: bold;
+}
+h4 {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+h5 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+hr {
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+}
+
+.img-circle
+{
+    width:260px;
+    height:250px;
+}
+.xxxsection {
+    padding-top: 75px;
+}
+#section-intro {
+    background: url(https://flevix.com/wp-content/uploads/2020/07/Red-Blue-Abstract-Background.jpg) no-repeat center top fixed;
+    background-size: cover;
+    height: 855px;
+    padding-top: 3px;
+}
+#section-about {
+    background: url(https://flevix.com/wp-content/uploads/2020/07/Red-Blue-Abstract-Background.jpg) no-repeat center fixed;
+    background-size: cover;
+    height: 855px;
+}
+#section-about p {
+    font-size: 1.5em;
+}
+#section-about a {
+    color: white;
+}
+#section-portfolio {
+    background: url(https://flevix.com/wp-content/uploads/2020/07/Red-Blue-Abstract-Background.jpg) center top no-repeat fixed;
+    background-size: cover;
+    min-height: 855px;
+}
+#section-contact {
+    background: url(https://flevix.com/wp-content/uploads/2020/07/Red-Blue-Abstract-Background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 855px;
+}
+.fade-darker {
+    /* Apply a translucent black bkgrnd to tone down the background, so not so distracting. */
+    background: rgba(0,0,0, 0.2);
+    height: 855px;
+}
+.fade-lighter {
+    /* Apply a translucent bkgrnd to tone down the background, so not so distracting. */
+    background: rgba(0, 0, 0, 0.7);
+    color:white;
+    height: 855px;
+}
+#section-contact h3 a {
+    color: #000;
+}
+footer{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.btn-default {
+    color: black;
+    background-color: #ddd;
+    border-color: black;
+    border-width: 2px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+    letter-spacing: 0.15em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+    margin-bottom: 20px;
+}
+.btn-default:hover {
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+@media (max-width: 767px) {
+    #section-intro li {
+        display: block;
+    }
+}
+.project-col {
+    border: 1px solid white;
+    /* padding: 0 15px 0 15px; */
+    margin-bottom: 40px;
+}
+.project-col:hover {
+    box-shadow: 5px 12px 8px rgba(0,0,0,0.8);
+}
+.project-img {
+    position: relative;
+    max-width: 400px;  /* for xs */
+    margin: 0 auto; /* for xs */
+}
+.project-hover-content {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    color: white;
+    text-align: center;
+    padding-top: 60px;
+}
+.project-img:hover > .project-hover-content{
+    background-color: black;
+    opacity: .7;
+    visibility: visible;
+    transition: .5s;
+}
+.text-center
+{
+    color:white;
+    font-weight: bold;
+
+}
+.project-caption{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    max-width: 400px;  /* for xs */
+    margin: 0 auto;  /* for xs */
+}
+.project-title {
+    font-size: 1.5em;
+}
+.project-tools {
+    font-style: italic;
+}
+.work{
+    background: url(https://flevix.com/wp-content/uploads/2020/07/Red-Blue-Abstract-Background.jpg) no-repeat center center fixed;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    border: 1px solid;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 1000px;
+}
+
+.work .work-header {
+    color: white;
+    text-align: center;
+    margin-top: 90px;
+    max-width: 640px;
+    margin: 25px auto 25px auto;
+    padding:25px;
+    font-size:34px;
+    display:block;
+
+
+}
+
+.project {
+    display:inline-block;
+    float:left;
+    text-decoration: none;
+    border: none;
+    height: 337px;
+    width: 337px;
+    margin: 35px 35px ;
+    align-content:center;
+    background: url(https://flevix.com/wp-content/uploads/2020/07/Red-Blue-Abstract-Background.jpg) no-repeat center center fixed;
+
+}
+.project-title{
+    font-weight: bold;
+    color:white;
+    font-size:15px;
+    padding:20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+.project-picture {
+
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 337px;
+    height: 337px;
+    display: inline-block;
+    float: left;
+}
