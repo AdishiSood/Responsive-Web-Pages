@@ -1,0 +1,480 @@
+<body>
+<nav id="navbar">
+    <header>Java Documentation</header>
+    <ul>
+        <li><a class="nav-link" href="#Introduction">Hello World!</a></li>
+        <li><a class="nav-link" href="#Data Types">DataTypes</a></li>
+        <li><a class="nav-link" href="#Conditionals">Conditionals</a></li>
+        <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+        <li><a class="nav-link" href="#Loops">Loops</a></li>
+        <li><a class="nav-link" href="#Functions">Functions</a></li>
+        <li><a class="nav-link" href="#Objects">Objects</a></li>
+        <li><a class="nav-link" href="#Inheritance">Inheritance</a></li>
+        <li><a class="nav-link" href="#Try and Catch">Try and Catch</a></li>
+        <li><a class="nav-link" href="#Abstract Classes">Abstract Classes</a></li>
+        <li><a class="nav-link" href="#Interfaces">Interfaces</a></li>
+        <li><a class="nav-link" href="#Generics">Generics</a></li>
+        <li><a class="nav-link" href="#Reference">References</a></li>
+    </ul>
+</nav>
+<main id="main-doc">
+    <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+            <p>Java is an object oriented language (OOP). Java objects
+                are part of so-called "Java classes".</p>
+            <p>Let's go over the Hello world program, which simply
+                prints "Hello, World!" to the screen.</p>
+             <code>
+                 public class Main {
+                 public static void main(String[] args) {
+                 System.out.println("This will be printed");
+                 }
+                 }
+             </code>
+            <p>The first line defines a class called Main.</p>
+            <code>public class Main {</code>
+            <p>The next line is:</p>
+            <code>public static void main(String[] args) {</code>
+            <p>This is the entry point of our Java program. the main method
+                has to have this exact signature in order to be able to run
+                our program.</p>
+            <ul>
+                <li>public: again means that anyone can access it.</li>
+                <li>static: means that you can run this method without creating an instance of main</li>
+                <li>void: means that this method doesn't return any value.</li>
+                <li>main: is the name of the method.</li>
+            </ul>
+                <p>The arguments we get inside the method are the arguments that we
+                    will get when running the program with parameters. It's an array
+                    of strings. We will use it in our next lesson, so don't worry if
+                    you don't understand it all now.</p>
+            <code>System.out.println("This will be printed");</code>
+            <ul>
+                <li>System: System is a pre-defined class that Java provides us and it holds
+                    some useful methods and variables.</li>
+                <li>out:  out is a static variable within System that represents the output
+                    of your program (stdout).</li>
+                <li>println: is a method of out that can be used to print a line.</li>
+            </ul>
+        </article>
+    </section>
+    <section class="main-section" id="Data Types">
+        <header>Data Types</header>
+        <article>
+            <p>Although Java is object oriented, not all types are objects.
+                It is built on top of basic variable types called primitives.</p>
+            <p>Here is a list of all primitives in Java:</p>
+            <ul>
+                <li>byte (number,1 byte)</li>
+                <li>short (number, 2 bytes)</li>
+                <li>int (number, 4 bytes)</li>
+                <li>long (number, 8 bytes)</li>
+                <li>double (float number, 8 bytes)</li>
+                <li>float (float number, 4 bytes)</li>
+                <li>char (a character, 2 bytes)</li>
+                <li>boolean (true or false, 1 byte)</li>
+            </ul>
+            <p>Java is a strong typed language, which means variables need
+                to be defined before we use them.</p>
+
+        </article>
+    </section>
+    <section class="main-section" id="Conditionals">
+        <header>Conditionals</header>
+        <article>
+            <p>Java uses boolean variables to evaluate conditions. The boolean
+                values true and false are returned when an expression is compared or
+                evaluated. For example:</p>
+             <code>
+                 int a = 4;
+                 boolean b = a == 4;
+
+                 if (b) {
+                 System.out.println("It's true!");
+                 }</code>
+            <p>Of course we don't normally assign a conditional expression to a boolean.
+                Normally, we just use the short version:</p>
+            <code>
+                int a = 4;
+                if (a == 4) {
+                System.out.println("Ohhh! So a is 4!");
+                }</code>
+            <h4>== and equals</h4>
+            <p>The operator == works a bit different on objects than on primitives. When
+                we are using objects and want to check if they are equal, the operator ==
+                will say if they are the same, if you want to check if they are logically equal,
+                you should use the equals method on the object. For example:</p>
+       <code>
+           String a = new String("Wow");
+           String b = new String("Wow");
+           String sameA = a;
+
+           boolean r1 = a == b;      // This is false, since a and b are not the same object
+           boolean r2 = a.equals(b); // This is true, since a and b are logically equals
+           boolean r3 = a == sameA;  // This is true, since a and sameA are really the same object</code>
+           <h4>if - else and between</h4>
+            <code>
+                if (a == b) {
+                // We already know this part
+                } else {
+                // a and b are not equal... :/
+                }</code>
+        </article>
+    </section>
+    <section class="main-section" id="Arrays">
+        <header>Arrays</header>
+        <article>
+            <p>Arrays in Java are also objects. They need to be declared and then created.
+                In order to declare a variable that will hold an array of integers, we
+                use the following syntax:</p>
+            <code>int[] arr;</code>
+<p>Notice there is no size, since we didn't create the array yet.</p>
+            <code>arr = new int[10];</code>
+            <p>This will create a new array with the size of 10. We can check
+                the size by printing the array's length:</p>
+            <code>System.out.println(arr.length);</code>
+            <p>We can access the array and set values:</p>
+            <code>arr[0] = 4; arr[1] = arr[0] + 5;</code>
+            <p>Java arrays are 0 based, which means the first element in an array is
+                accessed at index 0 (e.g: arr[0], which accesses the first element). Also,
+                as an example, an array of size 5 will only go up to index 4 due to it
+                being 0 based.</p>
+            <code>
+                int[] arr = new int[5]; //accesses and sets the first element
+                arr[0] = 4;</code>
+        </article>
+    </section>
+    <section class="main-section" id="Loops">
+        <header>Loops</header>
+        <p>There are two kind of loops in Java, for and while.</p>
+        <code>for (int i = 0; i < 3; i++) {}</code>
+        <p>
+            First section runs once when we enter the loop.
+
+            Second section is the gate keeper, if it returns true, we run the statements in the loop, if it returns false, we exit the loop. It runs right after the first section for the first time, then every time the loop is finished and the third section is run.
+
+            The third section is the final statement that will run every time the loop runs.
+
+            So in the case we have just seen, the loop will run 3 times. Here is the order of the commands:
+        </p>
+        <code>
+            int i = 0;
+            i < 3 // 0 < 3 = true
+            // Inside of loop
+            i++ // i is now 1
+            i < 3 // 1 < 3 = true
+            // Inside of loop
+            i++ // i is now 2
+            i < 3 // 2 < 3 = true
+            // Inside of loop
+            i++ // i is now 3
+            i < 3 // 3 < 3 = false
+            // Loop is done...</code>
+        <p>We can omit the first and third section of the loop (although it will
+            be weird), and the loop will still work:</p>
+        <code>for (;i < 5;) {}</code>
+        <h4>While</h4>
+        <p>The syntax is very similar to the previous for we looked at:</p>
+        <code>
+            while (condition) {}
+        </code>
+        <p>The condition will run for the first time when entering and
+            every time the loop is done. If it returns false, the loop will not
+            run.
+            If we want the loop to always run at least one, we can use do-while</p>
+        <code>do {
+
+            } while(condition);
+            Notice the ; in the end of the do-while.</code>
+    </section>
+    <section class="main-section" id="Functions">
+        <header>Functions</header>
+        <article>
+            In Java, all function definitions must be inside classes.
+            We also call functions methods. Let's look at an example method
+            <code>
+                public class Main {
+                public static void foo() {
+                // Do something here
+                }
+                }
+            </code>
+            <p>
+                foo is a method we defined in class Main. Notice a few things about foo.
+        <ul>
+                <li>static means this method belongs to the class Main and not to a specific
+                    instance of Main. Which means we can call the method from a different class
+                    like that Main.foo().</li>
+               <li> void means this method doesn't return a value. Methods can return a single
+                   value in Java and it has to be defined in the method declaration. However,
+                   you can use return by itself to exit the method.</li>
+        <li>This method doesn't get any arguments, but of course Java methods can get
+            arguments as we'll see further on.</li>
+        </ul>
+            </p>
+            <h4>Arguments</h4>
+            <p>I always like to say that arguments to Java methods are passed by value,
+                although some might disagree with my choice of words, I find it the best way
+                to explain and understand how it works exactly.</p>
+            <code>
+                public void bar(int num1, int num2) {
+                ...
+                }
+            </code>
+        </article>
+    </section>
+    <section class="main-section" id="Objects">
+        <header>Objects</header>
+        <article>
+            <p>Everything in Java is within classes and objects. Java
+                objects hold a state, state are variables which are saved together
+                within an object, we call them fields or member variables.
+                Let start with an example:
+            </p>
+            <code>
+                class Point {
+                int x;
+                int y;
+                }
+            </code>
+            <p>This class defined a point with x and y values.
+                In order to create an instance of this class, we need to use the
+                keyword new.</p>
+            <code>Point p = new Point();</code>
+            <p>
+                In this case, we used a default constructor (constructor that doesn't get
+                arguments) to create a Point. All classes that don't explicitly define a
+                constructor has a default constructor that does nothing.
+                We can define our own constructor:
+            </p>
+            <code>
+                class Point {
+                int x;
+                int y;
+
+                Point(int x, int y) {
+                this.x = x;
+                this.y = y;
+                }
+                }
+            </code>
+            <p>This means we can not longer use the default constructor new Point().
+                We can now only use the defined constructor new Point(4, 1).
+                We can define more than one constructor, so Point can be created in
+                several ways. Let's define the default constructor again.</p>
+            <code>
+                class Point {
+                int x;
+                int y;
+
+                Point() {
+                this(0, 0);
+                }
+
+                Point(int x, int y) {
+                this.x = x;
+                this.y = y;
+                }
+                }
+            </code>
+                <p>Notice the usage of the this keyword here. We can use it within
+                    a constructor to call a different constructor (in order to avoid code
+                    duplication). It can only be the first line within the constructor.
+                    We also used the this keyword as a reference of the current object
+                    we are running on.
+                    After we defined p we can access x and y.</p>
+            <code>
+                p.x = 3;
+                p.y = 6;
+            </code>
+        </article>
+    </section>
+    <section class="main-section" id="Inheritance">
+        <header>Inheritance</header>
+        <article>
+            <p>
+                In Java, the term inheritance refers to the adoption of all non-private
+                properties and methods of one class (superclass) by another class (subclass).
+                Inheritance is a way to make a copy of an existing class as the starting point
+                for another. In addition to the term subclass, inherited classes are also called
+                derived classes.
+            </p>
+            <p>
+                At this point, it may be helpful to distinguish inheritance from interfaces.
+                Interfaces define only the structure of the class members while inherited classes
+                include the actual code of the superclass. Additionally, inheritance (more accurately,
+                the definition of a subclass) uses the extends keyword in the subclass declaration.
+            </p>
+            <h4>An example of Inheritence</h4>
+            <p>Think of a door. It doesn't matter what kind. All doors open and close. However,
+                some doors open differently than others (lifting up vs swinging out, swinging in
+                vs sliding across). So, let's say Door is the superclass for a door and it has an
+                open method. The method is simple. It's only instruction is push.</p>
+            <code>
+                public class Door {
+                public void open ()
+                {
+                push();     // Since this is just a generic "Door" we will assume the simplest opening method.
+                // The actual open method must be overridden by a subclass, as we see below.
+                // Later, a way to force a subclass to override a method will be demonstrated --
+                // but for this simple example will do for now.
+                }
+                }
+            </code>
+        </article>
+    </section>
+    <section class="main-section" id="Try and Catch">
+        <header>Try and Catch</header>
+        <article>
+            <p>
+                Before going into try/catch statements, let's talk about Exceptions.
+                Exceptions are thrown every time an error occurs. Some examples:
+                ArrayIndexOutOfBounds is thrown if the index that does not exist in an array
+                is accessed (e.g: Trying to access arr[5], but arr only goes up to arr[4])
+                ArithmeticError is thrown if an illegal arithmetic operation is done (e.g: 42/0, division by zero)
+
+                There are lots of exceptions that Java can throw (more than the above).
+
+                But, how can you handle exceptions, when you're unsure if an error will occur.
+
+                That's the purpose of try/catch! This is the syntax for try/catch:
+            </p>
+            <code>
+                try {
+                //Code here
+                } catch (ExceptionHere name) {
+                //Replace ExceptionHere with your exception and name with the name of your exception.
+                //Code if exception "ExceptionHere" is thrown.
+                }
+            </code>
+            <p>
+                The code after the try block will be attempted to be run. If the exception
+                in the catch statement is thrown during the code in the try block is run, run
+                the code in the catch block.
+
+                You can tell the user that there is a problem, or anything else.
+
+                NOTE: You can also use Exception as the exception to catch if any
+                exception is thrown.
+            </p>
+        </article>
+    </section>
+    <section class="main-section" id="Abstract Classes">
+        <header>Abstract Classes</header>
+        <article>
+            <p>An Abstract class is a class which has abstract keyword prefixed to it.
+                A class must be prefixed with abstract if it has one or more methods with
+                abstract keyword. An abstract method is only declared but not implemented.
+                An abstract class cannot be instanciated but can be inherited by another
+                class. The inheriting class must implement all the abstract methods or else
+                the subclass should also be declared as abstract.
+
+                For example:</p>
+
+         <code>
+             abstract class abstractClass {
+             abstract void abstractMethod();
+             void concreteMethod() { // concrete methods are still allowed in abstract classes
+             System.out.println("This is a concrete method.");
+             }
+             }
+         </code>
+            <h4>Abstract classes versus interface</h4>
+            <p>
+                Abstract classes can contain fields which are not final and static and can
+                contain implemented methods as well but interfaces cannot. Abstract classes
+                with only abstract methods should be defined as interfaces.
+
+                When an abstract class implements an interface not all interface methods need
+                to be implemented, if the class is not abstract all the interface methods should
+                be implemented.
+                For example:
+            </p>
+            <code>
+                abstract class X implements Y {
+                // implements all but one method of Y
+                }
+
+                class XX extends X {
+                // implements the remaining method in Y
+                }
+            </code>
+            <p>Abstract classes can have static fields and static methods
+                and works it would with normal classes.</p>
+        </article>
+    </section>
+    <section class="main-section" id="Interfaces">
+        <header>Interfaces</header>
+        <article>
+            Interfaces are class templates. Although not strictly required, they
+            are part of the organizational structure of object-oriented programming
+            . Interfaces define methods for classes by specifying the method name,
+            the return type (or void) and the method arguments (by type and name).
+            These method definitions are called signatures. Because this is a template,
+            the method signatures contain no code. The code is entered into the implementation
+            of an interface. Interfaces are used in the discipline of polymorphism.
+
+            Note these two important points about interfaces:
+           <ul>
+               <li>
+                   If a class implements an interface, all
+                   of the interface's methods must appear in the class.
+               </li>
+               <li>The implements keyword is used when creating a class
+                   that is modeled after an interface.</li>
+           </ul>
+        </article>
+    </section>
+    <section class="main-section" id="Generics">
+        <header>Generics</header>
+        <article>
+            Generics provide compile-time type safety that allows programmers to catch invalid types at compile time.
+
+            As this feature is often used with collections, we will focus on
+            collections. Generics allows the user
+            to set the type of the collection to limit what kind of objects can be inserted
+            into the collection. The user also does not have to cast the values obtain
+            from the collection.
+
+            When declaring a generic, it must have a type parameter specifying what
+            type of elements will be in the collection. For example, to declare a list
+            containing strings, you would write:
+            <code>List<String> names = new ArrayList<>();</code>
+<h4>Generics in class declaration</h4>
+   <p></p> You can also use generics for class definition:</p>
+            <code>
+                public class YourClass<Class1,Class2>{
+                private Class1 bob1;
+                private Class2 bob2;
+                Abc(Class1 a, Class2 b){
+                this.bob1 = a;
+                this.bob2 = b;
+                }
+                public Class1 getBob1() {
+                return (this.bob1);
+                }
+                public Class2 getBob2() {
+                return (this.bob2);
+                }
+                }
+            </code>
+        </article>
+    </section>
+    <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+            <ul>
+                <li>
+                    All the documentation in this page is taken from
+                    <a
+                            href="https://www.learnjavaonline.org/"
+                            target="_blank"
+                    >Learn Java</a>
+                </li>
+            </ul>
+        </article>
+    </section>
+</main>
+</body>
+</html>
