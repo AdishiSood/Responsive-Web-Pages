@@ -1,0 +1,147 @@
+
+<head class="header">
+    <h1 id="title" > Survey Form </h1>
+    <p id="description" style="text-align:center;">This survey measures customer satisfaction with service. All information provided is anonymous, and will not be shared with 3rd parties. All fields are required.</p>
+</head>
+
+<body>
+<form id="survey-form" action="/survey-form" method="post">
+
+    <div class="grid">
+
+
+        <div class="banner" id = "details">
+            <h2>Details</h2></div>
+
+        <fieldset>
+            <div>
+                <label for="name" id="name-label">Name</label>
+                <input type="text" id="name" placeholder = "Enter Name" required>
+            </div>
+        </fieldset>
+
+        <fieldset id="genderFieldset">
+            <label id="gender-label"> Gender</label>
+            <input type="radio" id="femaleRadio" name="gender" value="female"><label>Female</label>
+            <input type="radio" id="maleRadio" name="gender" value="male"><label>Male</label>
+        </fieldset>
+
+        <fieldset>
+            <div id = "emailField">
+                <label for="email" id="email-label">E-mail:</label>
+                <input type="email" id="email" placeholder="Enter Email" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div id ="numberField">
+                <label for="number" id="number-label"> Number</label>
+                <input type="number" id="number" placeholder="Enter a number for captcha" min="1" max="4">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div id="ageField">
+                <label for="age">Age</label>
+                <input type="number" name="age" max="100" min="18" id="age" placeholder="Enter a number">
+            </div>
+        </fieldset>
+
+        <div id ="satisfactionField">
+            <label for="dropdown">Please select your satisfaction level </label>
+            <select name="happy" id="dropdown">
+                <option value="">--Please choose an option--</option>
+                <option value="Very Unhappy">Very Unhappy</option>
+                <option value="Unhappy">Unhappy</option>
+                <option value="Happy">Happy</option>
+                <option value="Very Happy">Very Happy</option>
+            </select>
+        </div>
+
+        <div class="banner" id="bannerQ"><h2>Questions</h2></div>
+
+
+        <fieldset id="servicesCheck">
+            <legend>Choose Services</legend>
+            <p> Select all the services you have availed of.</p>
+            <div>
+                <input type="checkbox" id="onsiteRepairs" name="services" value="onsite">
+                <label for="onsiteRepairs">Onsite Repairs</label>
+            </div>
+            <div>
+                <input type="checkbox" id="freePickup" name="services" value="pickup">
+                <label for="freePickup">Free Pickup</label>
+            </div>
+            <div>
+                <input type="checkbox" id="warranty" name="services" value="warranty">
+                <label for="warranty">Warranty</label>
+            </div>
+            <div>
+                <input type="checkbox" id="diagnosis" name="services" value="diagnosis">
+                <label for="diagnosis">Diagnosis</label>
+            </div>
+            <div>
+                <input type="checkbox" id="rent" name="services" value="rent">
+                <label for="rent">Renting Laptop</label>
+            </div>
+        </fieldset>
+
+        <div id="satisfactionField2">
+            <fieldset id="customerSatisfaction">
+                <legend>Customer Satisfaction</legend>
+                <p>1. How satisfied were you with your overall experience?</p>
+
+                <input type="radio" value="Very Likely" name="customerSatisfaction"><label> Very likely</label>
+                <input type="radio" value="Likely" name="customerSatisfaction"><label> Likely</label>
+                <input type="radio" value="Unlikely" name="customerSatisfaction"><label> Unlikely</label>
+                <input type="radio" value="Very Unlikely" name="customerSatisfaction"><label> Very Unlikely</label>
+            </fieldset>
+        </div>
+
+        <div id="recommendField">
+            <fieldset id="recommendFriend">
+                <legend>Recommendation</legend>
+                <p>2. How likely are you to recommend this service to a friend?</p>
+
+                <input type="radio" value="Very Likely" name="recommendFriend"><label> Very likely</label>
+                <input type="radio" value="Likely" name="recommendFriend"><label> Likely</label>
+                <input type="radio" value="Unlikely" name="recommendFriend"><label> Unlikely</label>
+                <input type="radio" value="Very Unlikely" name="recommendFriend"><label> Very Unlikely</label>
+            </fieldset>
+        </div>
+
+        <div id="timeField">
+            <fieldset id="time">
+                <legend>Timeliness</legend>
+                <p>3. How satisfied are you with the timeliness of the experience?</p>
+
+                <input type="radio" value="Very Likely" name="time"><label> Very likely</label>
+                <input type="radio" value="Likely" name="time"><label> Likely</label>
+                <input type="radio" value="Unlikely" name="time"><label> Unlikely</label>
+                <input type="radio" value="Very Unlikely" name="time"><label> Very Unlikely</label>
+            </fieldset>
+        </div>
+
+        <div id ="friendlyField">
+            <fieldset id="friendly">
+                <legend>Friendliness</legend>
+                <p>4. How friendly were the employees?</p>
+
+                <input type="radio" value="Very Likely" name="friendly"><label> Very likely</label>
+                <input type="radio" value="Likely" name="friendly"><label> Likely</label>
+                <input type="radio" value="Unlikely" name="friendly"><label> Unlikely</label>
+                <input type="radio" value="Very Unlikely" name="friendly"><label> Very Unlikely</label>
+
+    </div>
+        </fieldset>
+</form>
+<div id="comments">
+    <fieldset>
+        <legend>If you have any additional comments about the service, please type it here:<br></legend>
+        <textarea id="feedback" name="feedback">
+   </textarea>
+        <div class="divButton"><button id="submit" class="buttonSub">Submit</button></div>
+    </fieldset>
+</div>
+</div>
+</body>
